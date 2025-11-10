@@ -3,6 +3,9 @@
 import { lerContatos } from "./contatos.js";
 
 let container = document.querySelector("#container"),
+  main = document.querySelector("main"),
+  buttonNovoContato = document.querySelector("#novo-contato"),
+  buttonCancelar = document.querySelector("#cancelar"),
   contactList;
 
 async function loadContacts() {
@@ -25,3 +28,12 @@ async function loadContacts() {
 }
 
 loadContacts();
+
+buttonNovoContato.addEventListener("click", () => {
+  main.classList.remove("card-show");
+  main.classList.add("form-show");
+});
+buttonCancelar.addEventListener("click", () => {
+  main.classList.add("card-show");
+  main.classList.remove("form-show");
+});
