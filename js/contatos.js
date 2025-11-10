@@ -60,4 +60,4 @@ function eraser() {
   console.log(contatosLenght);
 }
 
-export { lerContatos, criarContato };
+export { lerContatos, criarContato, deletarContato };
